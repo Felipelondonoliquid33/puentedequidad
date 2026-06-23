@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Antonio:wght@700&family=Syne:wght@700;800&family=Outfit:wght@800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-retro: 'Press Start 2P', system-ui, sans-serif;
+  --font-mono-retro: 'VT323', monospace;
+  --font-condensed: 'Antonio', 'Impact', sans-serif;
+  --font-fancy: 'Outfit', sans-serif;
+  --font-youthful: 'Syne', sans-serif;
+  --color-retro-yellow: #FFCC00;
+  --color-retro-black: #000000;
+  --color-retro-white: #FFFFFF;
+}
+
+/* Custom retro styling utilities */
+.pixel-corners {
+  box-shadow: 
+    0 -4px 0 -2px #000,
+    0 4px 0 -2px #000,
+    -4px 0 0 -2px #000,
+    4px 0 0 -2px #000,
+    0 0 0 2px #000;
+}
+
+.pixel-corners-yellow {
+  box-shadow: 
+    0 -4px 0 -2px #ffcc00,
+    0 4px 0 -2px #ffcc00,
+    -4px 0 0 -2px #ffcc00,
+    4px 0 0 -2px #ffcc00,
+    0 0 0 2px #ffcc00;
+}
+
+.pixel-border-retro {
+  border: 4px solid #000000;
+  image-rendering: pixelated;
+}
+
+/* Scanlines overlay for arcade monitor effect */
+.crt-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.15) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Parallax backgrounds */
+@keyframes scrollBg {
+  from { background-position: 0 0; }
+  to { background-position: -800px 0; }
+}
+
+.game-pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Custom 8bit blink animation */
+@keyframes pixel-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.blink-retro {
+  animation: pixel-blink 0.8s infinite;
+}
+
+/* Sprite walking animation */
+@keyframes walk-cycle {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-4px) rotate(1deg); }
+  50% { transform: translateY(0) rotate(-1deg); }
+  75% { transform: translateY(-3px) rotate(1deg); }
+}
+
+.walk-anim {
+  animation: walk-cycle 0.4s infinite ease-in-out;
+}
+
+/* Running/gliding animation */
+@keyframes run-cycle {
+  0%, 100% { transform: translateY(0px) scaleY(1); }
+  50% { transform: translateY(-6px) scaleY(0.95); }
+}
+
+.run-anim {
+  animation: run-cycle 0.3s infinite ease-in-out;
+}
+
+/* Floating effect for collectibles and elements */
+@keyframes float-cycle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.float-anim {
+  animation: float-cycle 1.5s infinite ease-in-out;
+}
+
