@@ -978,7 +978,7 @@ export default function PuenteDeEquidad() {
         <div className="flex-1 text-left text-black/80 max-w-md">
           <span className="font-bold uppercase text-black block mb-1">¿CÓMO FUNCIONA?</span>
           <p className="font-sans leading-normal">
-            El juego simula el camino y dificultades cotidianas que recorren día a día millones de mujeres "madres cabeza de familia" Colombianas! A medida que Esperanza avanza, se topa con baches y barreras (el tiempo limitado, conos u obstáculos del hogar). Evitarlos mantendrá su energía alta, mientras que las estaciones de diálogo revelan realidades de género para aprender sobre corresponsabilidad en el hogar.
+            El juego simula el camino y dificultades cotidianas que recorren día a día millones de mujeres “madres cabeza de familia” Colombianas! A medida que Esperanza avanza, se topa con baches y barreras (el tiempo limitado, conos u obstáculos del hogar). Evitarlos mantendrá su energía alta, mientras que las estaciones de diálogo revelan realidades de género para aprender sobre corresponsabilidad en el hogar.
           </p>
         </div>
 
